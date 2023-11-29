@@ -1,0 +1,72 @@
+
+
+
+body{
+    background-color: #292929; /*siyah arka plan rengi oluşturduk*/
+    display: flex; /*display:flex dediğim için block elementleri yan yana getirir flex-direction:column yaptık alt alta gelsin diye*/
+    flex-direction: column; /*flex-direction:column diyerek div elemanlarının alt alta gelmesini sağlıyoruz*/
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /*body elementine sayfanın yüzde yüzünü kapla dedik*/
+    margin: 0; /*margin 0 diyerek scroll barı kapattık*/
+    color: #fff; /*body içerisindeki textleri beyaz yapıyoruz*/
+}
+/*block element oldukları için alt alta geliyorlar*/
+.seat{
+    background-color: #444451;
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+    border-radius: 5px;
+}
+/*koltuk seçili olduğunda olması istenen arka plan rengi*/
+.seat.selected{
+ background-color: #f6eb6f;
+}
+/*koltuk reserver edildiğinde olması istenen arka plan rengi*/
+.seat.reserved{
+  background-color: #fff;
+}
+
+.seat:not(.reserved):hover{
+    cursor: pointer;
+    transform: scale(1.2); /*scale ile üzerine gelince elementin boyutunu büyütüyoruz*/ 
+}
+
+.seat:nth-of-type(2n+2)
+{
+  margin-right: 20px; /*2. elemandan sonra 20px'lik margin verdik margin-right diyerek*/
+}
+.row{
+     display: flex;  /*display:flex diyerek yan yana getiririz*/
+}
+
+.screen{
+    background-color: #fff;
+    height: 50px;
+    width: 100%;
+    margin: 20px 0; /*üstten alttan 20px sağdan soldan 0px margin veriyoruz*/
+    box-shadow:0px 3px 8px rgba(255, 255, 255, 0.7) ;
+}
+
+.movie-list{
+    margin: 20px 0; /*üstten ve alttan 20px soldan ve sağdan 0px margin verdik*/ 
+}
+
+.info{
+    background-color:rgba(0, 0, 0, 0.2) ;
+    padding: 5px 10px; /*üstten alttan 5px sağdan soldan 10px iç boşluk veriyoruz*/
+    color:#777 ;
+    display: flex;
+}
+.info li{
+    display: flex; /*li altında da iki eleman var alt alta geliyor bunada display:flex deriz yan yana gelmesi için*/
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px; /*üstten alttan 0 sağdan soldan 10px margin veriyoruz*/
+}
+
+p.text span{
+    color: #f6eb6f;
+}
+

@@ -1,0 +1,49 @@
+
+
+body{
+    color:#fff ;
+    background-color: #573334;
+}
+#game{
+    width: 400px;
+    background-color: grey;
+    padding: 20px;
+    text-align: center;
+    margin: auto; /*sayfanın ortasına alıyor x ekseninde */
+}
+h1{
+    margin:0 0 18px 0 ;
+    border: 1px solid #fff;
+    padding :5px; /*kendi çerçevesi içinde text 'e 5px boşluk veriyor*/
+    font-weight: 400;
+}
+span{
+    font-size: 125%;
+    padding: 12px;
+}
+#result{
+    width: 100px;
+}
+#answer{
+    margin-top: 10px;
+    padding: 5px;
+    border: none;/*buton border'ını kaldırdık*/
+    width: 100px;
+    background: green;
+    color: #fff;
+}
+#answer:hover{
+    background: darkgreen;
+}
+#true,#false{
+    font-size: 150%;
+    margin-top: 10px;
+    padding: 10px;
+    display: inline-block; /*true ve false id'li divleri yan yana getirmek için display:inline-block yapıyoruz*/
+}
+#true{
+background-color:#1c9605 ;
+}
+#false{
+  background-color:#bd0c0c;
+}
